@@ -1,0 +1,73 @@
+@import './variables.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  padding: 1rem 2rem;
+  height: 100vh;
+  @media (min-width: 768px) {
+    margin: 50px auto;
+    max-width: 500px;
+    padding: 0;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 600px;
+  }
+}
+
+.header__title {
+  color: $text-primary;
+  font-family: IBM Plex Sans;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.header__subtitle {
+  color: $text-light-bg-primary;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 520px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #2BCC20;
+  cursor: pointer;
+  padding: 14px 18px;
+  width: 250px;
+  height: 50px;
+  border-radius: 3px;
+  margin: 0 auto;
+  transition: all .2s ease-in-out;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.btn:hover {
+  scale: 0.95;
+}
+
+strong {
+  font-weight: 700;
+}

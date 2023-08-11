@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+
+.textfield-container {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    order: 1;
+    margin-bottom: 5px;
+  }
+
+  .error-message {
+    margin-top: 2px;
+    order: 3;
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: 300;
+    opacity: 1;
+  }
+
+  .hidden {
+    opacity: 0 !important;
+  }
+
+  label, span {
+    margin-left: 3px;
+  }
+
+  input:required ~ label::after{
+    margin-left: 2px;
+    content: "*";
+  }
+  
+  input {
+    display: block;
+    order: 2;
+    padding: 14px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.231);
+    border-radius: 3px;
+    outline: none;
+    transition: all .2s ease-in-out;
+  }
+
+  input::placeholder {
+    color: $text-disabled;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.15px;
+  }
+
+  input:hover, input:focus {
+    border-color: #000;
+  }
+}
